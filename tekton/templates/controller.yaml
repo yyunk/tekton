@@ -43,8 +43,6 @@ spec:
       - name: {{ template "tekton.name" . }}
         image: {{ .Values.image.controller }}:{{ .Values.image.upstreamtag }}
         args: [
-          "-logtostderr",
-          "-stderrthreshold", "INFO",
           "-kubeconfig-writer-image", "{{ .Values.image.kubeconfigwriter }}:{{ .Values.image.upstreamtag }}",
           "-creds-image", "{{ .Values.image.credsinit }}:{{ .Values.image.upstreamtag }}",
           "-git-image", "{{ .Values.image.gitinit }}:{{ .Values.image.upstreamtag }}",

@@ -1,0 +1,46 @@
+image:
+  upstreamtag: test2
+  kubeconfigwriter: kubeconfigwriter
+  credsinit: creds-init
+  gitinit: git-init
+  controller: controller
+  webhook: webhook
+  entrypoint: entrypoint
+  pullrequest: pullrequest-init
+  imagedigestexporter: imagedigestexporter
+  gcsfetcher: gcs-fetcher
+auth:
+  git:
+    username: 
+    password: 
+    url: 
+  docker:
+    username:
+    password: 
+    url: 
+    # url: 
+    host: 
+    email: 
+controller:
+  enabled: true
+
+serviceaccount:
+  enabled: true
+  annotations: {}
+
+webhook:
+  enabled: true
+  MutatingWebhookConfiguration: false
+
+rbac:
+  cluster: false
+
+cluster:
+  resources:
+    create: false
+  crds:
+    create: false
+
+pvc:
+  size: 5Gi
+  storageClassName:

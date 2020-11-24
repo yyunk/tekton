@@ -1,14 +1,14 @@
 image:
-  upstreamtag: test2
-  kubeconfigwriter: kubeconfigwriter
-  credsinit: creds-init
-  gitinit: git-init
-  controller: controller
-  webhook: webhook
-  entrypoint: entrypoint
-  pullrequest: pullrequest-init
-  imagedigestexporter: imagedigestexporter
-  gcsfetcher: gcs-fetcher
+  upstreamtag: test-loop
+  kubeconfigwriter: 213.146.155.118:5500/tekton-kubeconfigwriter
+  credsinit: 213.146.155.118:5500/tekton-creds-init
+  gitinit: 213.146.155.118:5500/tekton-git-init
+  controller: 213.146.155.118:5500/tekton-controller
+  webhook: 213.146.155.118:5500/tekton-webhook
+  entrypoint: 213.146.155.118:5500/tekton-entrypoint
+  pullrequest: 213.146.155.118:5500/tekton-pullrequest-init
+  imagedigestexporter: 213.146.155.118:5500/tekton-imagedigestexporter
+  gcsfetcher: 213.146.155.118:5500/tekton-gcs-fetcher
 auth:
   git:
     username: 
